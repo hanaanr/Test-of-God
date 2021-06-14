@@ -1,0 +1,129 @@
+<!-- 
+Project Name: Test of God
+Team Members: Hanaan Shafi, Safal Shrestha, Cheena Karishev
+Project Description: This is an interactive web comic project done for the class
+Communications Lab, Summer 2021. This website is a fun, "breaking the 4th wall", kind of 
+piece that allows the viewer to change the story with their action. In essence,
+the user is the God that our character is seeking help from.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Test of God</title>
+	<link rel="shortcut icon" href="images/clock-favicon.png" type="image/x-icon">
+	<!-- Using the GSAP library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+	<!-- Separated the website into sections -->
+	<section class="title">
+		<h1>Test of God</h1>
+		<p>Click anywhere to enter</p>
+	</section>
+	<section class="intro">
+		<!-- importing the necessary sounds -->
+		<audio loop id = "clocksound" >
+			<source src="sounds/ticking clock.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="examnoises">
+			<source src="sounds/pencil on paper.mp3" type="audio/mpeg">
+		</audio>
+		<audio id = "bell">
+			<source src="sounds/bell.mp3" type="audio/mpeg">
+		</audio>
+		<img class="clock" src="images/newclock.gif" alt="">
+		<!-- <div class="clock">
+			<img class="clock-circle" src="images/SVG/clock/clock circle.svg" alt="">
+			<img class="minute-hand" src="images/SVG/clock/minute hand.svg" alt="">
+			<img class="hour-hand" src="images/SVG/clock/hour hand.svg" alt="">
+		</div> -->
+		<!-- <img class="clock" src="images/SVG/clock.svg" alt=""> -->
+		<img src="images/svg/intro-background.svg" alt="" class="intro-background">
+		<img class="main-character" src="images/frame 4 - stressed guy.png" alt="">
+	</section>
+
+	<!-- the two-dialogue section -->
+	<section class="second">
+		<div class="dialogue-1">
+			<img class="bubble" src="images/bubble.gif" alt="">
+			<h2>Why is this test so hard!! I have no clue how to do these. I am for sure failing on this.</h2>
+		</div>
+		<div class="dialogue-2">
+			<img class="bubble" src="images/bubble.gif" alt="">
+			<h2>My Mom's gonna kill me if I fail this one. Please God help me this time, I'll never cheat again!!!</h2>
+		</div>
+	</section>
+
+	<!-- section where the scrolling stops and user has to answer -->
+	<section class="third">
+		<img class="praying" src="images/frame 8 - prays again.png" alt="">
+		<div class="answer-popup">
+			<h1 class="top">77</h1>
+			<h1>+ 33</h1>
+			<div class="line"></div>
+			<input class="answer" type="text" placeholder="Answer here">
+			<img class="popup" src="images/popup.gif" alt="">
+			<p>Click on the box above and press enter after giving an answer</p>
+		</div>
+	</section>
+
+	<!-- section for the reaction to the input -->
+	<section class="fourth">
+		<img class="paper" src="images/exam paper.png" alt="">
+		<div class="written-answer">
+			<h1 class="top">77</h1>
+			<h1>+ 33</h1>
+			<div class="line"></div>
+			<h1 class="write"></h1>
+		</div>
+		<img class="surprised" src="images/frame 7 - startled.png" alt="">
+	</section>
+
+	<!-- section for the calm emotion -->
+	<section class = "fifth">
+		<div class= "dialogue-5">
+			<img class="bubble" src="images/bubble.gif" alt="">
+			<h2> Phew. I guess I won't fail this test after all. </h2>
+		</div>
+		<div class = "img-5">
+			<img class="main-character" src="images/frame 9 - thank you god.png" alt="">
+		</div>
+	</section>
+	
+	<!-- section to show that time passed -->
+	<section class = "later">
+		<div class= "dialogue-later">
+			<h2> A few days later... </h2>
+		</div>
+	</section>
+
+	<!-- section to show the result -->
+	<section class="gettingresult">
+		<img class="watchresult" src="images/exam returned.png" alt="">
+		<img class= "result" src="images/frame 13 - result A+.png" alt="">
+	</section>
+
+	<!-- section for reaction to the result -->
+	<section class="ending">
+		<img class="ending-image" src="images/never_cheat_again.png" alt="">
+		<div class= "ending-dialogue">
+			<img class="bubble" src="images/bubble.gif" alt="">
+			<h2>Thank you God! I will never cheat again.</h2>
+		</div>
+	</section>
+
+	<!-- footer section to show the ending when reached -->
+	<section class="footer">
+		<h1>The End</h1>
+	</section>
+	<script src="js/main.js"></script>
+</body>
+</html>

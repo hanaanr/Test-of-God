@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.title {
+    background: white;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1.5s ease;
+    opacity: 1;
+    z-index: 20;
+}
+
+.title h1{
+    font-size: 8em;
+}
+
+.title p {
+    font-size: 1.2em;
+
+}
+
+.fade {
+    opacity: 0%;
+}
+
+.intro {
+    width: 100%;
+    height: 200vh;
+    /* background: red; */
+    position: relative;
+}
+
+.clock {
+    position: absolute;
+    width: 15%;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+
+/* .clock .clock-circle {
+    position: absolute;
+    width: 80%;
+}
+
+.clock .minute-hand {
+    position: absolute;
+    width: 30%;
+    top: 20%;
+    left: 10%;
+    transform-origin: top right;
+    transform: rotate(0);
+    animation: minute 60s linear infinite;
+}
+
+.clock .hour-hand {
+    position: absolute;
+    width: 30%;
+    top: 20%;
+    left: 40%;
+    transform-origin: top left;
+    transform: rotate(0);
+    animation: hour 180s linear infinite;
+} */
+
+@keyframes minute {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes hour {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.intro-background {
+    position: absolute;
+    bottom: 0;
+    /* width: ; */
+}
+
+.main-character {
+    width: 30%;
+    position: absolute;
+    bottom: 5%;
+    right: 15%;
+    z-index: 10;
+}
+
+
+
+
+.second {
+    background: white;
+    width: 100%;
+    height: 200vh;
+    position: relative;
+}
+
+.dialogue-1, .dialogue-2, .dialogue-5, .dialogue-later, .ending-dialogue{
+    position: absolute;
+    width: 40%;
+    top: 20%;
+    left: 10%;
+    opacity: 0;
+    transition: all 1s ease;
+    z-index: 15;
+}
+
+.dialogue-1 h2, .dialogue-2 h2, .dialogue-5 h2, .ending-dialogue h2 {
+    position: absolute;
+    width: 80%;
+    margin-top: -7em;
+    margin-left: 3em;
+}
+
+.dialogue-2 {
+    top: 50%;
+}
+
+.bubble {
+    width: 100%;
+}
+
+.third {
+    background: white;
+    width: 100%;
+    height: 120vh;
+    position: relative;
+}
+
+.praying {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 100vh;
+    transform : translate(-50%, -100%);
+    width: 20%;
+}
+
+.answer-popup {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal {
+    opacity: 1;
+}
+
+.top {
+    margin-left: 0.8em;
+}
+
+.line {
+    width: 4em;
+    height: 0.1em;
+    background: black;
+}
+
+.answer-popup .answer {
+    margin-top: 0.2em;
+    margin-left: 0.2em;
+    padding: 0 0.2em;
+    text-align: right;
+    font-size: 1.5em;
+    font-style: bold;
+    width: 2.4em;
+    background: none;
+    /* text-decoration: none; */
+    border: 0.1em solid black;
+    letter-spacing: 0.2em;
+    /* background: rgb(211, 211, 211); */
+}
+
+.answer-popup input:focus {
+    outline: none;
+    letter-spacing: 0.2em;
+} 
+
+.answer-popup .answer::placeholder {
+    letter-spacing: 0em;
+    font-size: 0.3em;
+}
+
+.answer-popup .popup {
+    width: 40vh;
+    position: absolute;
+    left: -80%;
+    top: -15%;
+    pointer-events: none;
+}
+
+.answer-popup p {
+    position: absolute;
+    font-size: 0.4em;
+    left: 10%;
+    top: 110%;
+}
+
+.fourth {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: white;
+}
+
+.fourth .paper {
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* height: 80%; */
+}
+
+.fourth .written-answer {
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    font-size: 3em;
+}
+
+.written-answer .write {
+    margin-left: 0.8em;
+    letter-spacing: 0.2em;
+    opacity: 0;
+}
+
+.surprised {
+    width: 30%;
+    position: absolute;
+    top: 10vh;
+    left: 60%;
+    opacity: 0;
+}
+
+/* section for "phew i wont fail after all" */
+.fifth{
+    background: white;
+    width: 100%;
+    height: 120vh;
+    position: relative;
+}
+ 
+.img-5{
+    position: absolute;
+    right: 10%;
+    top: 110vh;
+    width: 110%;
+    opacity:0;
+    transition: all 1s ease;
+    z-index: 14;
+}
+
+.dialogue-5 h2 {
+    margin-left: 2em;
+    margin-top: -5em;
+}
+ 
+/* section for "a few days later" */
+.later{
+    background:white;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+ 
+.dialogue-later{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: 4em;
+    /* margin-top: 1em;
+    margin-left: 5em; */
+}
+
+
+/* section for getting result */
+.gettingresult {
+    background: white;
+    width: 100%;
+    height: 200vh;
+    position: relative;
+}
+
+.watchresult {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 110vh;
+    transform : translate(-50%, -200%);
+    width: 30%;
+}
+
+.result {
+    width: 60%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* #A {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 110vh;
+    transform : translate(-50%, -50%);
+    width: 50%;
+}
+
+#F {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 110vh;
+    transform : translate(-50%, -50%);
+    width: 50%;
+} */
+/* ////////////////// */
+
+
+.ending {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.ending-image {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.ending-dialogue .bubble {
+    position: absolute;
+    width: 80%;     
+    left: 5%;
+}
+
+.ending h2 {
+    width: 70%;
+    margin-top: 1.4em;
+}
+
+.footer {
+    width: 100%;
+    height: 20vh;
+}
+
+.footer h1 {
+    font-size: 8em;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    opacity: 0;
+}
