@@ -1,6 +1,6 @@
  # Test of God
  
- Link to Website: https://vigilant-nightingale-8fa74d.netlify.app/
+ Link to Website: https://safal312.github.io/Test-of-God/
 
 ### Group Members
 * Safal Shrestha
